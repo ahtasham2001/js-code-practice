@@ -25,3 +25,13 @@ new Promise(function(resolve,reject){
     console.log("Async 2 resolved");
 })
 
+// Example 3:
+
+const promiseThree = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        resolve({username: "Ahtasham", email: "ahtasham@gmail.com"})
+    },1000)
+})
+promiseThree.then(function(user){
+    console.log(user);
+})
